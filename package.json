@@ -1,0 +1,26 @@
+{
+  "name": "generator-arc-component",
+  "version": "1.0.0",
+  "description": "Generate accessible react component boilerplate",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/accessible-react/generator-arc-component.git"
+  },
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Bhargav Ponnapalli",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/accessible-react/generator-arc-component/issues"
+  },
+  "homepage": "https://github.com/accessible-react/generator-arc-component#readme",
+  "dependencies": {
+    "slugify": "^1.1.0",
+    "yeoman-generator": "^1.1.0"
+  }
+}
