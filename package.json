@@ -1,6 +1,6 @@
 {
   "name": "generator-arc-component",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate accessible react component boilerplate",
   "main": "index.js",
   "scripts": {
