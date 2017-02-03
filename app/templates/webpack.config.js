@@ -63,7 +63,6 @@ if(DEVELOPMENT){
         'NODE_ENV': '"development"'
       }
     }),
-    new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       title: '<%= appname %>',
       template : path.resolve(devPath,'template.html'),
