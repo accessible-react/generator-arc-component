@@ -6,7 +6,6 @@
   "scripts": {
     "clean": "rimraf dist",
     "start": "NODE_ENV=development webpack-dev-server --hot --history-api-fallback",
-    "start-prod": "npm run clean && NODE_ENV=production webpack",
     "build": "NODE_ENV=production npm run clean && webpack",
     "test" : "ava"
   },

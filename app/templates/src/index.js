@@ -1,7 +1,7 @@
 import React from 'react';
 
-export default class MyComponent extends React.Component{
+export default class <%= root_component_name %> extends React.Component{
   render(){
-    return <p>MyComponent</p>;
+    return <p><%= root_component_name %></p>;
   }
 }

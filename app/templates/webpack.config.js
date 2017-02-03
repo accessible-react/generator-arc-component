@@ -1,7 +1,7 @@
 var path = require('path');
 var webpack = require('webpack');
 var assetsPath = path.join(__dirname, 'src');
-var devPath = path.join(__dirname, 'dev');
+var devPath = path.join(__dirname, 'playground');
 var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
