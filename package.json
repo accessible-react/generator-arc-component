@@ -4,8 +4,7 @@
   "description": "Generate accessible react component boilerplate",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "publish": "npm version patch && npm publish"
+    "test": "npm test"
   },
   "repository": {
     "type": "git",
