@@ -12,9 +12,7 @@
   "author": "<%= author %>",
   "license": "<%= license %>",
   "dependencies": {
-    "classnames": "^2.2.5",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2"
+    "classnames": "^2.2.5"
   },
   "devDependencies": {
     "ava": "^0.17.0",
@@ -47,5 +45,8 @@
     ],
     "verbose": true,
     "babel": "inherit"
+  },"peerDependencies": {
+    "react": "^0.14.7 || ^15.0.0",
+    "react-dom": "^0.14.7 || ^15.0.0"
   }
 }
