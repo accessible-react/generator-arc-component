@@ -1,6 +1,6 @@
 # <%= appname %>
 
-<img src="https://travis-ci.org/<%= github_username %>/<%= appname %>.svg?branch=master" alt="build status"/>
+<img src="https://travis-ci.org/accessible-react/<%= appname %>.svg?branch=master" alt="build status"/>
 
 ### <%= description %>
 
