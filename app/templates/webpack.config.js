@@ -2,7 +2,6 @@ var path = require('path');
 var webpack = require('webpack');
 var assetsPath = path.join(__dirname, 'src');
 var devPath = path.join(__dirname, 'playground');
-var ExtractTextWebpackPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 var DEVELOPMENT = process.env.NODE_ENV === 'development';
@@ -25,8 +24,6 @@ var config = {
         test: /.jsx?$/,
         use: ['babel-loader'],
         exclude:/node_modules/
-      },{
-        test : /.scss$/
       }
     ]
   },
@@ -52,7 +49,6 @@ if(DEVELOPMENT){
     'webpack/hot/only-dev-server'
   );
   config.resolve.modules.push(devPath);
-  config.module.rules[1].use = ['style-loader','css-loader','sass-loader'];
 
   //config.module.rules[0].use.unshift('react-hot-loader/webpack');
 
@@ -73,14 +69,8 @@ if(DEVELOPMENT){
   config.entry.bundle.push(path.resolve(devPath,'main.js'));
 
 } else {
-  config.module.rules[1].loader =
-    ExtractTextWebpackPlugin.extract({
-      fallbackLoader: "style-loader",
-      loader: "css-loader!sass-loader"
-    });
 
   config.plugins.push(
-    new ExtractTextWebpackPlugin('style.css'),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': '"production"'

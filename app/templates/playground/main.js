@@ -8,7 +8,7 @@ if(module.hot){
 class Main extends React.Component{
   render(){
     return <div>
-      <h1>Welcome</h1>
+      <h1><%= root_component_name %></h1>
       <<%= root_component_name %>/>
     </div>;
   }
