@@ -9,7 +9,7 @@ var DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 var config = {
   entry :  {
-    bundle :  ['babel-polyfill'],
+    bundle :  [],
   },
   output: {
     chunkFilename: '[name].js',
@@ -90,7 +90,9 @@ if(DEVELOPMENT){
       'process.env': {
         'NODE_ENV': '"production"'
       }
-    })
+    }),
+		new webpack.NoErrorsPlugin(),
+    new webpack.optimize.UglifyJsPlugin()
   );
   config.entry.bundle.push(path.resolve(assetsPath,'index.js'));
 
