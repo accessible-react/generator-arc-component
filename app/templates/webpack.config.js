@@ -10,6 +10,7 @@ var DEVELOPMENT = process.env.NODE_ENV === 'development';
 var config = {
   entry :  {
     bundle :  [],
+    vendor : ['react', 'react-dom']
   },
   output: {
     chunkFilename: '[name].js',
@@ -59,6 +60,7 @@ if(DEVELOPMENT){
         'NODE_ENV': '"development"'
       }
     }),
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
     new HtmlWebpackPlugin({
       title: '<%= appname %>',
       template : path.resolve(devPath,'template.html'),
@@ -86,6 +88,7 @@ if(DEVELOPMENT){
   };
 
   config.plugins.push(
+    new webpack.optimize.CommonsChunkPlugin({ name: 'vendor', filename: 'vendor.bundle.js' }),
     new webpack.DefinePlugin({
       'process.env': {
         'NODE_ENV': '"production"'
